@@ -1,6 +1,7 @@
 
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
+import { numberIncrement, numberdecrement } from './store/reducers';
 
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
         <h1>Hello world {store.name}</h1>
         <h1>Hello world {store.age}</h1>
         <div>
-          <button onClick={()=> dispatch({type: "increment", payload: 1})}>Increment</button>
-          <button onClick={()=> dispatch({type: "decrement", payload: 1})}>Decrement</button>
+          <button onClick={()=> dispatch(numberIncrement(1))}>Increment</button>
+          <button onClick={()=> dispatch(numberdecrement(1))}>Decrement</button>
         </div>
       </div>
   );

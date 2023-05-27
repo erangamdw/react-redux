@@ -11,8 +11,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    {/* wrap the entire app using provider and parse the store */}
     <Provider store={store}><App /></Provider>
-    
   </React.StrictMode>
 );
 
